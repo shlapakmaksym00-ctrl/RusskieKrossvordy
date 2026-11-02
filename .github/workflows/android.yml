@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'RusskieKrossvordy_GitHub_Build.zip'
+      - 'RusskieKrossvordy_Scanword_AdFree.zip'
       - '.github/workflows/android.yml'
 
 jobs:
@@ -23,8 +23,7 @@ jobs:
           gradle-version: '8.9'
 
       - name: Unpack project
-        run: unzip -o RusskieKrossvordy_GitHub_Build.zip
-
+        run: unzip -o RusskieKrossvordy_Scanword_AdFree.zip
       - name: Build APK
         working-directory: RusskieKrossvordy
         run: gradle assembleDebug --no-daemon
